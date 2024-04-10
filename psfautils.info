@@ -1,0 +1,19 @@
+type = module
+name = PSFAUtils
+description = A short description of this module.
+backdrop = 1.x
+
+; Link to the module's configuration page.
+configure = admin/config/system/psfautils
+
+; Add custom CSS & JS files.
+stylesheets[all][] = css/psfautils.css
+scripts[] = js/psfautils.js
+
+; List any dependencies here.
+; dependencies[] = contact
+
+; Find suggested packages and tags at: https://docs.backdropcms.org/documentation/module-packages-and-tags
+package = User interface
+tags[] = Administration
+tags[] = Images

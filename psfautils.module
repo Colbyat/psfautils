@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * A short description of this module.
+ */
+
+/**
+ * Implements hook_config_info().
+ */
+function psfautils_config_info() {
+  return array(
+    'psfautils.settings' => array(
+      'label' => t('PSFAUtils settings'),
+      'group' => t('Configuration'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function psfautils_menu() {
+  return array(
+    'admin/config/system/psfautils' => array(
+      'title' => 'PSFAUtils',
+      'description' => 'Configure PSFAUtils.',
+      'page callback' => 'backdrop_get_form',
+      'page arguments' => array('psfautils_configuration_form'),
+      'access arguments' => array('administer psfautils'),
+      'file' => 'psfautils.admin.inc',
+    ),
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function psfautils_permission() {
+  return array(
+    'administer mymodule' => array(
+      'title' => t('Administer PSFAUtils'),
+    ),
+  );
+}
